@@ -7,11 +7,20 @@ Workflow (Git-as-CMS):
 """
 
 import os
+import sys
 import re
 import yaml
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
+
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 
 # Load env from backend/.env
 env_path = Path(__file__).resolve().parent / ".env"
@@ -94,9 +103,11 @@ def sync_all_posts():
     md_files = list(POSTS_DIR.glob("*.md"))
     print(f"📂 Found {len(md_files)} markdown files in '{POSTS_DIR.name}'\n")
 
+    current_slugs = set()
     synced_count = 0
     for file_path in md_files:
         post_data = parse_markdown_file(file_path)
+        current_slugs.add(post_data["slug"])
         try:
             # Upsert by unique column 'slug'
             res = supabase.table("posts").upsert(post_data, on_conflict="slug").execute()
@@ -105,7 +116,21 @@ def sync_all_posts():
         except Exception as e:
             print(f"❌ Failed to sync [{file_path.name}]: {e}")
 
-    print(f"\n🎉 Successfully synced {synced_count}/{len(md_files)} posts to Supabase Cloud!")
+    # 2. Prune: Delete posts in DB that no longer exist in the local posts directory
+    deleted_count = 0
+    try:
+        db_posts = supabase.table("posts").select("slug, title").execute()
+        if db_posts.data:
+            for row in db_posts.data:
+                slug = row.get("slug")
+                if slug and slug not in current_slugs:
+                    supabase.table("posts").delete().eq("slug", slug).execute()
+                    print(f"🗑️ Deleted from DB: [{slug}] - '{row.get('title')}'")
+                    deleted_count += 1
+    except Exception as e:
+        print(f"⚠️ Error checking orphaned posts from DB: {e}")
+
+    print(f"\n🎉 Sync completed: {synced_count} synced, {deleted_count} deleted from Supabase Cloud!")
 
 
 if __name__ == "__main__":
