@@ -1,0 +1,62 @@
+@import "katex/dist/katex.min.css";
+@import "highlight.js/styles/atom-one-dark.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  color-scheme: light;
+  --bg: #f7f4ec; --bg2: #ffffff; --fg: #1c1b17; --fg-dim: #6b6656;
+  --line: #dedacb; --accent: #2e4b44; --accent-fg: #f7f4ec; --amber: #a9662b;
+  --shadow: 0 1px 2px rgba(20, 20, 10, .05), 0 4px 10px rgba(20, 20, 10, .04);
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #15171a; --bg2: #1b1e22; --fg: #e7e4da; --fg-dim: #8a9088;
+  --line: #2a2e31; --accent: #7fbf8c; --accent-fg: #0f1210; --amber: #d8a657;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 16px rgba(0,0,0,.25);
+}
+[data-theme="warm"] {
+  color-scheme: light;
+  --bg: #efe3cb; --bg2: #f8efdb; --fg: #3b2a1b; --fg-dim: #8a6e4c;
+  --line: #dec9a0; --accent: #a9662b; --accent-fg: #f8efdb; --amber: #8b4a1e;
+  --shadow: 0 1px 2px rgba(60,30,0,.08), 0 6px 14px rgba(60,30,0,.06);
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 70px; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: "Inter", system-ui, sans-serif;
+  transition: background .2s, color .2s;
+}
+::selection { background: var(--accent); color: var(--accent-fg); }
+
+@keyframes blink { 50% { opacity: .25; } }
+.blink-cursor { animation: blink 1s steps(2) infinite; }
+
+.prose-note { max-width: 70ch; font-size: 16.5px; line-height: 1.7; }
+.prose-note h1 { font-size: 30px; margin: 0 0 6px; font-weight: 700; }
+.prose-note h2 { font-size: 20px; margin: 34px 0 10px; font-weight: 700; scroll-margin-top: 80px; }
+.prose-note h3 { font-size: 17px; margin: 24px 0 8px; font-weight: 600; scroll-margin-top: 80px; }
+.prose-note p { margin: 0 0 16px; }
+.prose-note a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.prose-note blockquote {
+  border-left: 3px solid var(--accent); margin: 16px 0; padding: 2px 16px;
+  color: var(--fg-dim); font-style: italic;
+}
+.prose-note code {
+  font-family: "JetBrains Mono", monospace; background: var(--bg2);
+  border: 1px solid var(--line); padding: 1px 5px; border-radius: 4px; font-size: .88em;
+}
+.prose-note pre {
+  background: #101210; border-radius: 8px; overflow: auto; padding: 14px 16px;
+  margin: 16px 0; border: 1px solid var(--line);
+}
+.prose-note pre code { background: none; border: none; padding: 0; font-size: 13px; line-height: 1.6; }
+.prose-note table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
+.prose-note th, .prose-note td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+.prose-note ul, .prose-note ol { margin: 0 0 16px; padding-left: 22px; }
+.prose-note img { border-radius: 6px; border: 1px solid var(--line); }
