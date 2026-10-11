@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: TrieuPhi Tech Notes
+  structure:
+    - type: space
+      key: space-tech-notes
+      title: Tech Notes
+      path: notes
+      default: true
+      content:
+        directory: ./frontend/posts
+
