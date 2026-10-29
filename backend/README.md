@@ -40,6 +40,21 @@ Khi server đang chạy:
 | `PUT` | `/api/posts/{slug}` | Cập nhật bài viết (yêu cầu header `X-Api-Key`) |
 | `DELETE` | `/api/posts/{slug}` | Xoá bài viết (yêu cầu header `X-Api-Key`) |
 
+## Kiểm tra Model API (OpenAI-compatible)
+
+Không lưu API key trong source code. Trên PowerShell, thiết lập biến môi trường
+trong phiên terminal hiện tại rồi chạy script:
+
+```powershell
+$env:MODEL_API_BASE = "http://172.18.60.121:4000"
+$env:MODEL_API_KEY = "<your-model-api-key>"
+python health_check_model_api.py
+```
+
+Script gọi `GET /v1/models`, in thời gian phản hồi và số model trả về. Exit code
+`0` nghĩa là API hoạt động; `1` là API không truy cập được hoặc trả lỗi; `2` là
+chưa thiết lập API key.
+
 ---
 
 ## 🗄️ Kết nối Supabase Cloud
@@ -56,4 +71,3 @@ Khi bạn đã tạo Project trên [Supabase](https://supabase.com):
    ADMIN_API_KEY=dev_secret_key_123
    ```
 4. Khởi động lại backend, server sẽ tự động chuyển sang đọc/ghi dữ liệu thật từ Supabase.
-
