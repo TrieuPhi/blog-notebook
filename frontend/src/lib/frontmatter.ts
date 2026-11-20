@@ -4,12 +4,51 @@ export interface Frontmatter {
   title: string;
   description: string;
   date: string;
-  updated: string;
+  updated?: string;
   category: string;
   tags: string[];
   status: string;
-  featured: boolean;
+  featured?: boolean;
   readingTime: number;
+  slug?: string;
+  lang?: string;
+  translationKey?: string;
+  phase?: string;
+  phaseNumber?: string;
+  phaseTitle?: string;
+  lesson?: string;
+  type?: string;
+  motto?: string;
+  artifacts?: string[];
+  keyPoints?: string[];
+}
+
+export function parseArrayValue(val: string): string[] {
+  try {
+    const parsed = JSON.parse(val);
+    if (Array.isArray(parsed)) {
+      return parsed.map((item) => String(item).trim()).filter(Boolean);
+    }
+  } catch {
+    // fallback to regex-based tokenization
+  }
+  const inner = val.slice(1, -1).trim();
+  if (!inner) return [];
+
+  const items: string[] = [];
+  const regex = /"([^"]*)"|'([^']*)'|([^,\s][^,]*?)(?:,\s*|$)/g;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(inner)) !== null) {
+    const item = match[1] ?? match[2] ?? match[3];
+    if (item !== undefined) {
+      const clean = item.trim();
+      if (clean) items.push(clean);
+    }
+    if (regex.lastIndex === match.index) {
+      regex.lastIndex++;
+    }
+  }
+  return items;
 }
 
 export function parseFrontmatter(raw: string): { data: Frontmatter; content: string } {
@@ -44,7 +83,7 @@ export function parseFrontmatter(raw: string): { data: Frontmatter; content: str
         if (items.length) { data[key] = items; i = j; continue; }
       }
       if (val.startsWith("[") && val.endsWith("]")) {
-        data[key] = val.slice(1, -1).split(",").map((s: string) => s.trim().replace(/^["']|["']$/g, "")).filter(Boolean);
+        data[key] = parseArrayValue(val);
       } else if (val === "true" || val === "false") {
         data[key] = val === "true";
       } else if (/^-?\d+$/.test(val)) {

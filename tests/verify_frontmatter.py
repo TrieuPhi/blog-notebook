@@ -47,6 +47,7 @@ if hasattr(sys.stderr, "reconfigure"):
 # Canonical categories defined in PROJECT.md and frontend topics
 CANONICAL_CATEGORIES = {
     "AI",
+    "Agent Engineering",
     "LLM",
     "RAG",
     "RAGAS",

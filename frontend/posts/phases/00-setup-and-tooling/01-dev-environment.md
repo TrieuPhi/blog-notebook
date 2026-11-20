@@ -1,3 +1,22 @@
+---
+title: "Thiết lập Môi trường Phát triển AI (Dev Environment Setup)"
+description: "Hướng dẫn thiết lập môi trường phát triển AI đa ngôn ngữ (Python, Node.js, Rust), quản lý môi trường ảo với uv, cấu hình GPU và kiểm chứng 4 tầng hạ tầng kỹ thuật."
+date: "2026-11-20"
+category: "Developer Tools"
+tags: ["Developer Tools", "Environment", "Python", "Tooling"]
+status: "published"
+readingTime: 12
+lang: "vi"
+phase: "00-setup-and-tooling"
+phaseNumber: "00"
+lesson: "01-dev-environment"
+translationKey: "00-01-dev-environment"
+slug: "01-dev-environment"
+motto: "Your tools shape your thinking. Set them up once, set them up right."
+artifacts: ["Checklist", "Tool", "Code mẫu"]
+keyPoints: ["Mô hình 4 tầng hạ tầng kỹ thuật: System, Package, Runtime, AI Libraries", "Quản lý gói và môi trường tốc độ cao với uv và pnpm", "Kiểm thử tăng tốc phần cứng GPU CUDA và Apple MPS trước khi code"]
+---
+
 # Dev Environment
 
 > Your tools shape your thinking. Set them up once, set them up right.

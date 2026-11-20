@@ -31,6 +31,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://setlog.dev/article/01-dev-environment</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://setlog.dev/article/01-the-agent-loop</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://setlog.dev/article/Machine%20Learning%20Fundamentals%20Notes</loc>
     <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>

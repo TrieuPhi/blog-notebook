@@ -20,16 +20,31 @@ function escapeXml(unsafe) {
     .replace(/'/g, "&apos;");
 }
 
+function getAllMarkdownFiles(dir) {
+  let results = [];
+  if (!fs.existsSync(dir)) return results;
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      results = results.concat(getAllMarkdownFiles(fullPath));
+    } else if (entry.isFile() && entry.name.endsWith(".md")) {
+      results.push(fullPath);
+    }
+  }
+  return results;
+}
+
 function parsePosts() {
   if (!fs.existsSync(postsDir)) {
     console.warn(`[generate-rss-sitemap] Warning: Posts directory not found at ${postsDir}`);
     return [];
   }
-  const files = fs.readdirSync(postsDir).filter((f) => f.endsWith(".md"));
+  const files = getAllMarkdownFiles(postsDir);
   const posts = [];
 
   for (const file of files) {
-    const raw = fs.readFileSync(path.join(postsDir, file), "utf-8");
+    const raw = fs.readFileSync(file, "utf-8");
     const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
     if (!match) continue;
 
@@ -52,7 +67,7 @@ function parsePosts() {
     }
 
     if (data.status !== "published") continue;
-    const slug = file.replace(/\.md$/, "");
+    const slug = data.slug || path.basename(file, ".md");
     posts.push({ ...data, slug });
   }
 

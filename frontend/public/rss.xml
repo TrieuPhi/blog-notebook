@@ -5,8 +5,24 @@
     <link>https://setlog.dev</link>
     <description>Personal technical notebook on AI, LLM systems, RAG architecture, and engineering.</description>
     <language>vi</language>
-    <lastBuildDate>Thu, 19 Nov 2026 06:41:22 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 17:23:00 GMT</lastBuildDate>
     <atom:link href="https://setlog.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Thiết lập Môi trường Phát triển AI (Dev Environment Setup)</title>
+      <link>https://setlog.dev/article/01-dev-environment</link>
+      <guid isPermaLink="true">https://setlog.dev/article/01-dev-environment</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hướng dẫn thiết lập môi trường phát triển AI đa ngôn ngữ (Python, Node.js, Rust), quản lý môi trường ảo với uv, cấu hình GPU và kiểm chứng 4 tầng hạ tầng kỹ thuật.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Vòng lặp Agent (The Agent Loop): Quan sát, Suy luận, Hành động</title>
+      <link>https://setlog.dev/article/01-the-agent-loop</link>
+      <guid isPermaLink="true">https://setlog.dev/article/01-the-agent-loop</guid>
+      <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Mọi hệ thống AI Agent hiện đại (Claude Code, Devin, Cursor) đều vận hành trên biến thể của vòng lặp ReAct: Observe -&gt; Think -&gt; Act. Bóc tách bản chất và tự xây dựng từ đầu với Python stdlib.</description>
+      <category>Agent Engineering</category>
+    </item>
     <item>
       <title>Nền tảng Machine Learning: Từ Đại số Tuyến tính, Tối ưu hóa đến Thuật toán Dự đoán</title>
       <link>https://setlog.dev/article/Machine%20Learning%20Fundamentals%20Notes</link>
