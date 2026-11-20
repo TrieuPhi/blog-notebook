@@ -7,6 +7,8 @@ import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import { getPost, relatedFor, backlinksFor, resolveWikilinks, POSTS } from "../lib/posts";
 import Mermaid from "../components/Mermaid";
+import GiscusComments from "../components/GiscusComments";
+import { useArticleSEO } from "../lib/useArticleSEO";
 
 function slugify(s: string) {
   return s.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -16,6 +18,8 @@ export default function Article() {
   const { slug = "" } = useParams();
   const post = getPost(slug);
   const [activeId, setActiveId] = useState("");
+
+  useArticleSEO(post);
 
   const headings = useMemo(() => {
     if (!post) return [];
@@ -104,6 +108,11 @@ export default function Article() {
         {prev ? <Link to={`/article/${prev.slug}`} className="border border-line rounded p-3 bg-bg2"><div className="font-mono text-[10.5px] text-fgdim">← PREV</div>{prev.title}</Link> : <span />}
         {next ? <Link to={`/article/${next.slug}`} className="border border-line rounded p-3 bg-bg2 text-right"><div className="font-mono text-[10.5px] text-fgdim">NEXT →</div>{next.title}</Link> : <span />}
       </div>
+
+      <section className="mt-12 pt-8 border-t border-line" id="comments">
+        <div className="font-mono text-[11.5px] text-fgdim mb-4 tracking-wider">COMMENTS & DISCUSSIONS</div>
+        <GiscusComments key={post.slug} slug={post.slug} />
+      </section>
     </div>
   );
 }

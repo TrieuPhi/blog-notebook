@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "generate-meta": "node scripts/generate-rss-sitemap.js",
+    "build": "node scripts/generate-rss-sitemap.js && tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -2,12 +2,13 @@
 r"""
 run_all_checks.py — Master E2E Test Runner for Blog Notebook
 
-Orchestrates the entire 5-tier testing suite:
+Orchestrates the entire 6-tier testing suite:
   - Tier 1: Frontmatter Schema Validation (`verify_frontmatter.py`)
   - Tier 2: Markdown & KaTeX / Mermaid Syntax Validation (`verify_markdown_syntax.py`)
   - Tier 3: Standard Unit Test Suite (`blog-notebook/tests/standard/`)
   - Tier 4: Heavy GPU Standalone Dry-Run & Compilation (`blog-notebook/tests/gpu_standalone/`)
   - Tier 5: Frontend Build Verification (`npm run build` in `blog-notebook/frontend`)
+  - Tier 6: Syndication & Indexing Validation (`verify_syndication.py`)
 
 Exit code:
   0: All active tiers passed successfully.
@@ -174,6 +175,49 @@ def run_tier_5_frontend_build(repo_root: Path) -> TierResult:
         return TierResult("Tier 5: Frontend Build Verification", "FAIL", "Vite/TypeScript build error", duration, err_msg.strip())
 
 
+def run_tier_6_syndication(python_exe: str, repo_root: Path, check_dist: bool = True) -> TierResult:
+    """Tier 6: Syndication & Indexing Validation (verify_syndication.py)."""
+    start = time.time()
+    script = repo_root / "blog-notebook" / "tests" / "verify_syndication.py"
+    frontend_dir = repo_root / "blog-notebook" / "frontend"
+
+    if not script.exists():
+        return TierResult("Tier 6: Syndication & Indexing Validation", "SKIP", "verify_syndication.py not found", 0.0)
+
+    target_dir = frontend_dir / "dist" if (check_dist and (frontend_dir / "dist" / "sitemap.xml").exists()) else frontend_dir / "public"
+    cmd = [python_exe, str(script), "--dir", str(target_dir)]
+    code, stdout, stderr = run_command(cmd, repo_root)
+    duration = time.time() - start
+
+    if code == 0:
+        return TierResult("Tier 6: Syndication & Indexing Validation", "PASS", "RSS, Sitemap & robots.txt valid", duration)
+    else:
+        err_msg = stdout + "\n" + stderr
+        return TierResult("Tier 6: Syndication & Indexing Validation", "FAIL", "Syndication validation error", duration, err_msg.strip())
+
+
+def find_default_python() -> str:
+    """Finds the most suitable Python interpreter (prefers environment with test dependencies)."""
+    try:
+        import networkx  # noqa: F401
+        return sys.executable
+    except ImportError:
+        pass
+
+    candidates = [
+        Path("C:/Users/PhiTrieuDai/app/envs/blog/python.exe"),
+        Path.home() / "app" / "envs" / "blog" / "python.exe",
+        Path.home() / "app" / "envs" / "blog" / "Scripts" / "python.exe",
+        Path(__file__).resolve().parent.parent.parent / ".venv" / "Scripts" / "python.exe",
+        Path(__file__).resolve().parent.parent.parent / ".venv" / "bin" / "python",
+    ]
+    for candidate in candidates:
+        if candidate.exists():
+            return str(candidate)
+
+    return sys.executable
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Master E2E Test Runner for Blog Notebook Articles & Test Suite."
@@ -181,8 +225,8 @@ def main() -> int:
     parser.add_argument(
         "--python",
         type=str,
-        default=sys.executable,
-        help="Path to Python interpreter (default: current sys.executable)",
+        default=find_default_python(),
+        help="Path to Python interpreter (default: detected environment interpreter)",
     )
     parser.add_argument(
         "--posts-dir",
@@ -193,9 +237,9 @@ def main() -> int:
     parser.add_argument(
         "--tier",
         type=int,
-        choices=[1, 2, 3, 4, 5],
+        choices=[1, 2, 3, 4, 5, 6],
         default=None,
-        help="Run only a specific test tier (1 to 5).",
+        help="Run only a specific test tier (1 to 6).",
     )
     parser.add_argument(
         "--skip-build",
@@ -262,6 +306,14 @@ def main() -> int:
         print(f"   [{r5.status}] {r5.details} ({r5.duration:.2f}s)")
     elif args.skip_build:
         results.append(TierResult("Tier 5: Frontend Build Verification", "SKIP", "Skipped via --skip-build", 0.0))
+
+    # Tier 6
+    if args.tier is None or args.tier == 6:
+        print(">> Running Tier 6: Syndication & Indexing Validation...")
+        check_dist = not args.skip_build
+        r6 = run_tier_6_syndication(python_exe, repo_root, check_dist=check_dist)
+        results.append(r6)
+        print(f"   [{r6.status}] {r6.details} ({r6.duration:.2f}s)")
 
     total_duration = time.time() - overall_start
 

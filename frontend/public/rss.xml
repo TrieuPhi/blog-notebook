@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>set.log — notes on AI, engineering &amp; learning</title>
+    <link>https://setlog.dev</link>
+    <description>Personal technical notebook on AI, LLM systems, RAG architecture, and engineering.</description>
+    <language>vi</language>
+    <lastBuildDate>Thu, 19 Nov 2026 06:41:22 GMT</lastBuildDate>
+    <atom:link href="https://setlog.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Nền tảng Machine Learning: Từ Đại số Tuyến tính, Tối ưu hóa đến Thuật toán Dự đoán</title>
+      <link>https://setlog.dev/article/Machine%20Learning%20Fundamentals%20Notes</link>
+      <guid isPermaLink="true">https://setlog.dev/article/Machine%20Learning%20Fundamentals%20Notes</guid>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Tổng quan toàn diện về Machine Learning: Phân loại Supervised/Unsupervised, Gradient Descent, Hàm mất mát, Đánh đổi Bias-Variance và Thuật toán cốt lõi.</description>
+      <category>AI</category>
+    </item>
+    <item>
+      <title>Deep Learning từ A-Z: Cẩm nang từ Neural Network đến Optimization</title>
+      <link>https://setlog.dev/article/gioi-thieu-deep-learning</link>
+      <guid isPermaLink="true">https://setlog.dev/article/gioi-thieu-deep-learning</guid>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Cẩm nang toàn diện về Deep Learning: Bản chất Neural Networks, Activation Functions, Forward &amp; Backpropagation, Optimizers, Regularization và Evaluation Metrics.</description>
+      <category>AI</category>
+    </item>
+    <item>
+      <title>Đánh giá Hệ thống RAG với RAGAS: Bản chất LLM-as-a-Judge, Faithfulness và Relevancy</title>
+      <link>https://setlog.dev/article/ragas-evaluators</link>
+      <guid isPermaLink="true">https://setlog.dev/article/ragas-evaluators</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Nguyên lý chuyên sâu về đánh giá RAG: RAG Triad, cơ chế LLM-as-a-Judge, toán học các chỉ số Faithfulness, Answer Relevancy, Context Precision/Recall và hạn chế thực tế.</description>
+      <category>AI</category>
+    </item>
+    <item>
+      <title>Huấn luyện Tinh chỉnh Qwen-32B với SFT: LoRA, QLoRA và Tối ưu VRAM DeepSpeed</title>
+      <link>https://setlog.dev/article/qwen3-32b-sft</link>
+      <guid isPermaLink="true">https://setlog.dev/article/qwen3-32b-sft</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Cẩm nang chuyên sâu về Supervised Fine-Tuning cho mô hình Qwen-32B: Cơ chế toán học LoRA/QLoRA, kiến trúc DeepSpeed ZeRO-3, phân bổ VRAM và kỹ thuật đóng băng trọng số.</description>
+      <category>LLM</category>
+    </item>
+    <item>
+      <title>Triển khai vLLM Chuẩn Production: PagedAttention, Continuous Batching và Kubernetes Serving</title>
+      <link>https://setlog.dev/article/vllm-production</link>
+      <guid isPermaLink="true">https://setlog.dev/article/vllm-production</guid>
+      <pubDate>Thu, 10 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Kỹ thuật tối ưu hóa phục vụ suy luận LLM quy mô lớn: Thuật toán PagedAttention, cơ chế Continuous Batching, định tuyến tải và kiến trúc Kubernetes High-Availability.</description>
+      <category>MLOps</category>
+    </item>
+    <item>
+      <title>Xây dựng CI/CD Pipeline Tự động Đánh giá RAG trong Production</title>
+      <link>https://setlog.dev/article/rag-eval-pipeline</link>
+      <guid isPermaLink="true">https://setlog.dev/article/rag-eval-pipeline</guid>
+      <pubDate>Sat, 29 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Quy trình thiết lập CI/CD pipeline tự động đánh giá chất lượng RAG: Golden Testset, kiểm thử hồi quy retrieval, ngưỡng chất lượng (Quality Gate) và giám sát liên tục.</description>
+      <category>RAG</category>
+    </item>
+    <item>
+      <title>Học sâu Python: Khám phá Descriptors, Metaclasses, GIL và Quản lý Bộ nhớ</title>
+      <link>https://setlog.dev/article/learning-python-deeply</link>
+      <guid isPermaLink="true">https://setlog.dev/article/learning-python-deeply</guid>
+      <pubDate>Fri, 14 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Khảo sát chuyên sâu kiến trúc nội tại CPython: Giao thức Descriptor, chu trình Metaclass, cơ chế bộ thu gom rác Generational GC và bản chất đồng thời của GIL.</description>
+      <category>Python</category>
+    </item>
+    <item>
+      <title>Xây dựng Personal Knowledge Graph: Mô hình Mạng lưới Tri thức Đa chiều</title>
+      <link>https://setlog.dev/article/personal-knowledge-graph</link>
+      <guid isPermaLink="true">https://setlog.dev/article/personal-knowledge-graph</guid>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Phương pháp luận và kỹ thuật kiến tạo Đồ thị Tri thức Cá nhân: Mạng lưới phi tuyến tính Zettelkasten, giải thuật PageRank, phân tích độ trung tâm và đồ thị NetworkX.</description>
+      <category>Developer Tools</category>
+    </item>
+  </channel>
+</rss>
