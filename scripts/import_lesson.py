@@ -184,6 +184,7 @@ def main():
     parser.add_argument("--lesson", help="Lesson directory name, e.g. 01-the-agent-loop")
     parser.add_argument("--status", default="draft", choices=["draft", "published"], help="Post status")
     parser.add_argument("--lang", default="vi", help="Post language (default: vi)")
+    parser.add_argument("--all", action="store_true", help="Import all lessons in the given --phase")
     parser.add_argument("--force", action="store_true", help="Overwrite existing target file")
     parser.add_argument("--list-phases", action="store_true", help="List all available phases")
     parser.add_argument("--list-lessons", action="store_true", help="List lessons for given --phase")
@@ -200,6 +201,21 @@ def main():
             print("Error: --phase is required to list lessons.")
             sys.exit(1)
         list_lessons(args.source, args.phase)
+        return
+
+    if args.all:
+        if not args.phase:
+            print("Error: --phase is required when using --all.")
+            sys.exit(1)
+        phase_dir = args.source / "phases" / args.phase
+        if not phase_dir.exists():
+            print(f"Error: Phase directory not found: {phase_dir}")
+            sys.exit(1)
+        lessons = sorted([l.name for l in phase_dir.iterdir() if l.is_dir() and (l / "docs" / "en.md").exists()])
+        print(f"Found {len(lessons)} lessons in {args.phase}. Importing...")
+        for l in lessons:
+            import_lesson(args.source, args.phase, l, status=args.status, lang=args.lang, force=args.force)
+        print(f"\nDone! Successfully processed {len(lessons)} lessons in {args.phase}.")
         return
 
     if not args.phase or not args.lesson:

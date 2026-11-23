@@ -278,14 +278,14 @@ def validate_katex_syntax(plain_lines: list[tuple[int, str]], file_name: str) ->
                     )
                 )
 
-    # Mask display math before checking inline math
-    masked_text = display_block_regex.sub(lambda m: " " * len(m.group(0)), full_text)
+    # Mask display math before checking inline math (preserving newlines to prevent line_map drift)
+    masked_text = display_block_regex.sub(lambda m: "".join("\n" if c == "\n" else " " for c in m.group(0)), full_text)
 
     # Mask inline code spans `...`
     masked_text = re.sub(r"`[^`\n]+`", lambda m: " " * len(m.group(0)), masked_text)
 
-    # Mask HTML comments <!-- ... -->
-    masked_text = re.sub(r"<!--[\s\S]*?-->", lambda m: " " * len(m.group(0)), masked_text)
+    # Mask HTML comments <!-- ... --> (preserving newlines to prevent line_map drift)
+    masked_text = re.sub(r"<!--[\s\S]*?-->", lambda m: "".join("\n" if c == "\n" else " " for c in m.group(0)), masked_text)
 
     # 3. Tokenize line-by-line for inline math
     masked_lines = masked_text.splitlines()

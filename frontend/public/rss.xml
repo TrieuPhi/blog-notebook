@@ -5,14 +5,110 @@
     <link>https://setlog.dev</link>
     <description>Personal technical notebook on AI, LLM systems, RAG architecture, and engineering.</description>
     <language>vi</language>
-    <lastBuildDate>Fri, 20 Nov 2026 17:23:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 06:05:44 GMT</lastBuildDate>
     <atom:link href="https://setlog.dev/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Thiết lập Môi trường Phát triển AI (Dev Environment Setup)</title>
+      <title>Thiết Lập Môi Trường Phát Triển AI Chuẩn Chuyên Nghiệp</title>
       <link>https://setlog.dev/article/01-dev-environment</link>
       <guid isPermaLink="true">https://setlog.dev/article/01-dev-environment</guid>
-      <pubDate>Fri, 20 Nov 2026 00:00:00 GMT</pubDate>
-      <description>Hướng dẫn thiết lập môi trường phát triển AI đa ngôn ngữ (Python, Node.js, Rust), quản lý môi trường ảo với uv, cấu hình GPU và kiểm chứng 4 tầng hạ tầng kỹ thuật.</description>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Xây dựng nền tảng trạm làm việc AI đa tầng: Cấu hình Linux/WSL2/macOS, làm chủ trình quản lý uv siêu tốc, thiết lập Node.js/Rust và kiểm chứng tăng tốc phần cứng GPU CUDA/MPS.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Git &amp; Quy Trình Quản Lý Phiên Bản Cho Kỹ Sư AI</title>
+      <link>https://setlog.dev/article/02-git-and-collaboration</link>
+      <guid isPermaLink="true">https://setlog.dev/article/02-git-and-collaboration</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ quy trình Git thực chiến cho kỹ sư AI: Thiết lập .gitignore chuẩn chống rò rỉ checkpoint gigabyte, phân nhánh thử nghiệm mô hình, giải quyết xung đột notebook và làm chủ Git LFS/DVC.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Thiết Lập GPU &amp; Điện Toán Đám Mây Cho Kỹ Sư AI</title>
+      <link>https://setlog.dev/article/03-gpu-setup-and-cloud</link>
+      <guid isPermaLink="true">https://setlog.dev/article/03-gpu-setup-and-cloud</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ hạ tầng tăng tốc phần cứng cho AI: Phân biệt CUDA Driver vs Toolkit, cấu hình Apple Silicon MPS, đo kiểm tốc độ nhân ma trận và tính toán ngân sách VRAM chuẩn xác chống lỗi CUDA OOM.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Quản Lý API Key &amp; Kết Nối Mô Hình AI An Toàn</title>
+      <link>https://setlog.dev/article/04-apis-and-keys</link>
+      <guid isPermaLink="true">https://setlog.dev/article/04-apis-and-keys</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hướng dẫn toàn diện về tích hợp API mô hình ngôn ngữ lớn (LLM): Bảo mật khóa API với biến môi trường, kết nối đa nhà cung cấp (OpenAI, Gemini, Anthropic), xử lý lỗi 429 Rate Limit với Exponential Backoff và streaming phản hồi.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Jupyter Notebooks: Bàn Thí Nghiệm &amp; Cạm Bẫy Thực Chiến Cho Kỹ Sư AI</title>
+      <link>https://setlog.dev/article/05-jupyter-notebooks</link>
+      <guid isPermaLink="true">https://setlog.dev/article/05-jupyter-notebooks</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ JupyterLab trong công việc AI hàng ngày: Tận dụng lệnh ma thuật (magic commands), gán kết nối kernel với môi trường ảo uv, giải quyết xung đột Git bằng nbstripout và tránh bẫy rò rỉ bộ nhớ GPU.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Quản Trị Môi Trường Python Đỉnh Cao Với uv</title>
+      <link>https://setlog.dev/article/06-python-environments</link>
+      <guid isPermaLink="true">https://setlog.dev/article/06-python-environments</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Xóa bỏ vĩnh viễn địa ngục phụ thuộc (Dependency Hell) trong AI: Làm chủ uv - trình quản lý gói nhanh gấp 100 lần, xây dựng file pyproject.toml chuẩn mực, khóa phiên bản với uv.lock và quản lý xung đột CUDA PyTorch.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Docker cho Kỹ sư AI: Đóng gói Môi trường Huấn luyện và Phục vụ Mô hình Tái lập 100%</title>
+      <link>https://setlog.dev/article/07-docker-for-ai</link>
+      <guid isPermaLink="true">https://setlog.dev/article/07-docker-for-ai</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ Docker trong AI: Cấu hình NVIDIA Container Toolkit, tối ưu hóa kích thước image với uv cache mounts, chia sẻ bộ nhớ IPC cho DataLoader và điều phối RAG với Docker Compose.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Thiết lập Editor &amp; IDE cho Kỹ sư AI: Từ VS Code Remote SSH đến AI-First Code Editor</title>
+      <link>https://setlog.dev/article/08-editor-setup</link>
+      <guid isPermaLink="true">https://setlog.dev/article/08-editor-setup</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Biến editor thành trợ lý đắc lực: Cấu hình VS Code Remote SSH mượt mà trên GPU Cloud, tự động lint &amp; format với Ruff siêu tốc, gỡ lỗi Jupyter Notebook và quản lý context rules cho AI Editor.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Quản lý Dữ liệu trong Kỹ thuật AI: Từ Hugging Face Cache đến Parquet &amp; DVC</title>
+      <link>https://setlog.dev/article/09-data-management</link>
+      <guid isPermaLink="true">https://setlog.dev/article/09-data-management</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Xây dựng pipeline quản lý dữ liệu chuẩn công nghiệp: Tải và stream dataset khổng lồ bằng Hugging Face, tối ưu định dạng lưu trữ Parquet vs Arrow, và quản lý phiên bản với DVC.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Làm chủ Terminal &amp; Shell cho Kỹ sư AI: Từ Lọc Log Huấn luyện đến Tmux và Quản trị GPU</title>
+      <link>https://setlog.dev/article/10-terminal-and-shell</link>
+      <guid isPermaLink="true">https://setlog.dev/article/10-terminal-and-shell</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bộ kỹ năng dòng lệnh sinh tồn cho kỹ sư AI: Vận hành session bền bỉ với tmux, xử lý và phân tích log hàng GB với pipeline Unix, giám sát phần cứng GPU và tiêu diệt tiến trình ma.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Linux Sinh Tồn cho Kỹ sư AI: Làm chủ GPU Cloud và Vượt qua Cạm bẫy Hệ thống</title>
+      <link>https://setlog.dev/article/11-linux-for-ai</link>
+      <guid isPermaLink="true">https://setlog.dev/article/11-linux-for-ai</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Cẩm nang sinh tồn Linux thực chiến: Quản lý dung lượng ổ đĩa thông minh, khắc phục lỗi tràn bộ nhớ dùng chung /dev/shm, cấu hình phân quyền và tạo systemd service cho AI API.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Debugging &amp; Profiling trong AI: Bắt Lỗi Ngầm, Khắc phục Tràn VRAM và Tối ưu Huấn luyện</title>
+      <link>https://setlog.dev/article/12-debugging-and-profiling</link>
+      <guid isPermaLink="true">https://setlog.dev/article/12-debugging-and-profiling</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Phương pháp gỡ lỗi mã nguồn AI chuyên sâu: Xử lý lỗi tensor broadcasting âm thầm, bắt gradient NaN/Inf, rò rỉ đồ thị tính toán PyTorch và profiling hiệu năng CPU/GPU với PyTorch Profiler.</description>
+      <category>Developer Tools</category>
+    </item>
+    <item>
+      <title>Python Chuyên Sâu cho Kỹ sư AI: Bản Chất Bộ Nhớ, Thành Ngữ Cốt Lõi và Vectorization</title>
+      <link>https://setlog.dev/article/13-python-for-ai-engineering</link>
+      <guid isPermaLink="true">https://setlog.dev/article/13-python-for-ai-engineering</guid>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ Python cho AI: Khám phá sự khác biệt bộ nhớ giữa Python List và NumPy Array, tránh các lỗi ngầm tai hại với Generator/Mutable Defaults, và tối ưu hóa tốc độ tính toán qua Vectorization.</description>
       <category>Developer Tools</category>
     </item>
     <item>
