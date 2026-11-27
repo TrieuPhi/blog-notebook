@@ -5,8 +5,184 @@
     <link>https://setlog.dev</link>
     <description>Personal technical notebook on AI, LLM systems, RAG architecture, and engineering.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 21 Nov 2026 06:05:44 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 13:59:52 GMT</lastBuildDate>
     <atom:link href="https://setlog.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Trực giác Đại số Tuyến tính cho AI (Linear Algebra Intuition)</title>
+      <link>https://setlog.dev/article/01-linear-algebra-intuition</link>
+      <guid isPermaLink="true">https://setlog.dev/article/01-linear-algebra-intuition</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất hình học của vector, ma trận, không gian con và phép trực giao hóa Gram-Schmidt – nền tảng cốt lõi của embedding và LoRA trong AI.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Các Phép Toán Vector &amp; Ma Trận Cốt Lõi (Vectors, Matrices &amp; Operations)</title>
+      <link>https://setlog.dev/article/02-vectors-matrices-operations</link>
+      <guid isPermaLink="true">https://setlog.dev/article/02-vectors-matrices-operations</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ phép nhân ma trận, chuyển vị, vết, định thức từ scratch và cơ chế lan truyền forward layer Y = XW + b trong mạng nơ-ron và Transformers.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Biến Đổi Ma Trận &amp; Hình Học Không Gian (Matrix Transformations)</title>
+      <link>https://setlog.dev/article/03-matrix-transformations</link>
+      <guid isPermaLink="true">https://setlog.dev/article/03-matrix-transformations</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Ma trận không phải là bảng số tĩnh mà là cỗ máy biến dạng không gian. Hiểu bản chất hình học của phép quay, co giãn, trượt và ứng dụng trong RoPE của LLM.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Giải tích cho Kỹ sư AI &amp; Học máy (Calculus for ML)</title>
+      <link>https://setlog.dev/article/04-calculus-for-ml</link>
+      <guid isPermaLink="true">https://setlog.dev/article/04-calculus-for-ml</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ đạo hàm, đạo hàm riêng, vector gradient, xấp xỉ Taylor và ma trận Hessian từ số 0 bằng Python – la bàn toán học dẫn lối mọi mạng nơ-ron.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Quy Tắc Dây Chuyền &amp; Vi Phân Tự Động (Chain Rule &amp; Autodiff)</title>
+      <link>https://setlog.dev/article/05-chain-rule-and-autodiff</link>
+      <guid isPermaLink="true">https://setlog.dev/article/05-chain-rule-and-autodiff</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Tự tay xây dựng engine vi phân tự động chế độ đảo ngược (Reverse-Mode Autodiff) kiểu Micrograd từ số 0 bằng Python – trái tim giải thuật đứng sau PyTorch và Backpropagation.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Xác Suất &amp; Các Phân Phối Cốt Lõi (Probability &amp; Distributions)</title>
+      <link>https://setlog.dev/article/06-probability-and-distributions</link>
+      <guid isPermaLink="true">https://setlog.dev/article/06-probability-and-distributions</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ nền tảng xác suất cho AI: Phân biệt PMF vs PDF, khám phá Định lý Giới hạn Trung tâm, và lập trình hàm Softmax ổn định số học từ scratch bằng Python.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Định Lý Bayes &amp; Suy Luận Xác Suất (Bayes&apos; Theorem &amp; Inference)</title>
+      <link>https://setlog.dev/article/07-bayes-theorem</link>
+      <guid isPermaLink="true">https://setlog.dev/article/07-bayes-theorem</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu sâu quy tắc cập nhật niềm tin Prior -&gt; Posterior, thuật toán Naive Bayes từ scratch với Laplace smoothing, và ứng dụng trong Bayesian A/B testing &amp; MAP.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Tối ưu hóa trong Học sâu: Từ Gradient Descent đến Adam (Optimization: From SGD to Adam)</title>
+      <link>https://setlog.dev/article/08-optimization</link>
+      <guid isPermaLink="true">https://setlog.dev/article/08-optimization</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Giải mã bản chất hình học của bề mặt hàm mất mát, dao động zigzag, và xây dựng thuần túy từ đầu các bộ tối ưu Gradient Descent, SGD Momentum, RMSprop, Adam, AdamW.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Lý Thuyết Thông Tin Cho AI (Information Theory for AI)</title>
+      <link>https://setlog.dev/article/09-information-theory</link>
+      <guid isPermaLink="true">https://setlog.dev/article/09-information-theory</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất Shannon Entropy, Cross-Entropy, KL Divergence từ scratch, dẫn xuất hàm mất mát phân loại và ứng dụng trong DPO Alignment &amp; LLM Perplexity.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Giảm Chiều Dữ Liệu và Trực Giác Không Gian (Dimensionality Reduction)</title>
+      <link>https://setlog.dev/article/10-dimensionality-reduction</link>
+      <guid isPermaLink="true">https://setlog.dev/article/10-dimensionality-reduction</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá Lời nguyền số chiều (Curse of Dimensionality), tự xây dựng thuật toán PCA từ ma trận hiệp phương sai, biểu đồ Scree plot, tái tạo dữ liệu và Kernel PCA phân tách phi tuyến trong AI.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Phân rã Giá trị Kỳ dị và Nén Ma trận Thứ hạng Thấp (Singular Value Decomposition - SVD)</title>
+      <link>https://setlog.dev/article/11-singular-value-decomposition</link>
+      <guid isPermaLink="true">https://setlog.dev/article/11-singular-value-decomposition</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất hình học của SVD (Rotate-Scale-Rotate), Định lý Eckart-Young, tự cài đặt Truncated SVD từ đầu, ma trận giả nghịch đảo Moore-Penrose và kết nối sâu sắc với LoRA trong AI.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Toán tử Tensor và Kiến trúc Đa chiều trong Deep Learning (Tensor Operations)</title>
+      <link>https://setlog.dev/article/12-tensor-operations</link>
+      <guid isPermaLink="true">https://setlog.dev/article/12-tensor-operations</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất của Tensor, cấu trúc bộ nhớ và Strides, tự xây dựng Broadcasting rules engine và Einsum từ đầu, truy vết dòng chảy hình dạng Tensor trong Multi-Head Attention.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Độ Ổn Định Số Học và Nghệ Thuật Huấn Luyện AI (Numerical Stability)</title>
+      <link>https://setlog.dev/article/13-numerical-stability</link>
+      <guid isPermaLink="true">https://setlog.dev/article/13-numerical-stability</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá chuẩn số thực IEEE 754, cạm bẫy triệt tiêu thảm khốc, chứng minh toán học và cài đặt LogSumExp, Stable Softmax, LayerNorm và Gradient Checking từ đầu trong AI.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Chuẩn và Độ Đo Khoảng Cách trong Không Gian Vector (Norms and Distances)</title>
+      <link>https://setlog.dev/article/14-norms-and-distances</link>
+      <guid isPermaLink="true">https://setlog.dev/article/14-norms-and-distances</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất hình học của chuẩn Lp, khoảng cách Manhattan, Euclidean, Chebyshev, Cosine và Mahalanobis, kết nối với điều chuẩn Lasso và Ridge cùng hệ thống Vector Search.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Thống Kê Ứng Dụng Trong AI &amp; Machine Learning (Statistics for ML)</title>
+      <link>https://setlog.dev/article/15-statistics-for-ml</link>
+      <guid isPermaLink="true">https://setlog.dev/article/15-statistics-for-ml</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ thống kê mô tả, hiệu chỉnh Bessel, tương quan Pearson và Spearman, kiểm định Welch t-test, Bootstrap CI và A/B testing trong AI.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Các Phương Pháp Lấy Mẫu Trong Generative AI (Sampling Methods)</title>
+      <link>https://setlog.dev/article/16-sampling-methods</link>
+      <guid isPermaLink="true">https://setlog.dev/article/16-sampling-methods</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ kỹ thuật lấy mẫu biến ngẫu nhiên: Biến đổi CDF nghịch đảo, Rejection Sampling, Metropolis-Hastings MCMC, Temperature, Top-k, Top-p và Reparameterization Trick trong VAE.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Hệ Phương Trình Tuyến Tính &amp; Bình Phương Tối Thiểu (Linear Systems &amp; Least Squares)</title>
+      <link>https://setlog.dev/article/17-linear-systems</link>
+      <guid isPermaLink="true">https://setlog.dev/article/17-linear-systems</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Giải bài toán Ax = b là gốc rễ của mọi thuật toán hồi quy và tối ưu hóa trong Machine Learning. Xây dựng thuật toán khử Gauss, phân rã LU, Cholesky và phương trình chuẩn tắc từ số 0.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Tối ưu hóa Lồi trong Machine Learning: Từ Lý thuyết đến Kỹ thuật AI (Convex Optimization for AI)</title>
+      <link>https://setlog.dev/article/18-convex-optimization</link>
+      <guid isPermaLink="true">https://setlog.dev/article/18-convex-optimization</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất hình học của tập lồi, hàm lồi, bất đẳng thức Jensen, phương pháp Newton-Raphson đa chiều với Backtracking Line Search, điều kiện KKT và đối ngẫu SVM.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Số phức &amp; Phép quay không gian trong AI (Complex Numbers &amp; RoPE)</title>
+      <link>https://setlog.dev/article/19-complex-numbers</link>
+      <guid isPermaLink="true">https://setlog.dev/article/19-complex-numbers</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá bản chất hình học của số phức như phép quay 2D, công thức Euler và tự tay xây dựng Rotary Position Embedding (RoPE) từ số 0 cho LLM.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Biến đổi Fourier &amp; Biến đổi Fourier Nhanh trong AI (Fourier Transform &amp; FFT)</title>
+      <link>https://setlog.dev/article/20-fourier-transform</link>
+      <guid isPermaLink="true">https://setlog.dev/article/20-fourier-transform</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Từ miền thời gian sang miền tần số: Tự tay xây dựng Discrete Fourier Transform (DFT), thuật toán Cooley-Tukey Radix-2 FFT và tạo Spectrogram âm thanh từ số 0.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Lý thuyết Đồ thị &amp; Mạng Nơ-ron Đồ thị trong AI (Graph Theory &amp; GCN)</title>
+      <link>https://setlog.dev/article/21-graph-theory</link>
+      <guid isPermaLink="true">https://setlog.dev/article/21-graph-theory</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Từ ma trận kề, ma trận bậc, toán tử Laplacian đến Spectral Clustering và xây dựng tầng Graph Convolutional Network (GCN) Kipf &amp; Welling từ số 0.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
+    <item>
+      <title>Quá trình Ngẫu nhiên &amp; Mô hình Khuếch tán trong AI (Stochastic Processes &amp; DDPM)</title>
+      <link>https://setlog.dev/article/22-stochastic-processes</link>
+      <guid isPermaLink="true">https://setlog.dev/article/22-stochastic-processes</guid>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Từ bước đi ngẫu nhiên, xích Markov, động lực học Langevin đến toán học mô hình khuếch tán DDPM (Forward &amp; Reverse Diffusion) từ số 0.</description>
+      <category>Math &amp; AI Foundations</category>
+    </item>
     <item>
       <title>Thiết Lập Môi Trường Phát Triển AI Chuẩn Chuyên Nghiệp</title>
       <link>https://setlog.dev/article/01-dev-environment</link>

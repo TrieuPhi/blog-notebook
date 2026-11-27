@@ -26,7 +26,7 @@ if hasattr(sys.stderr, "reconfigure"):
 POSTS_DIR = Path(r"c:\project\blog\blog-notebook\frontend\posts")
 
 CANONICAL_CATEGORIES = {
-    "AI", "LLM", "RAG", "RAGAS", "MLOps", "Backend", "DevOps", "Python", "Developer Tools", "Learning"
+    "AI", "Agent Engineering", "LLM", "RAG", "RAGAS", "MLOps", "Backend", "DevOps", "Python", "Developer Tools", "Learning", "Math & AI Foundations"
 }
 
 VALID_MERMAID_TYPES = {
