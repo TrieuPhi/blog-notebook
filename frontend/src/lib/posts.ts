@@ -19,14 +19,14 @@ function slugify(path: string, customSlug?: string) {
 const POST_PHASE_MAP: Record<string, string> = {
   "01-dev-environment": "00-setup-and-tooling",
   "personal-knowledge-graph": "00-setup-and-tooling",
-  "learning-python-deeply": "01-python-internals",
-  "Machine Learning Fundamentals Notes": "03-machine-learning-fundamentals",
-  "gioi-thieu-deep-learning": "04-deep-learning-foundations",
-  "qwen3-32b-sft": "07-sft-and-peft",
-  "rag-eval-pipeline": "10-rag-patterns",
-  "ragas-evaluators": "11-rag-evaluation-ragas",
+  "learning-python-deeply": "00-setup-and-tooling",
+  "Machine Learning Fundamentals Notes": "02-ml-fundamentals",
+  "gioi-thieu-deep-learning": "03-deep-learning-core",
+  "qwen3-32b-sft": "11-llm-engineering",
+  "rag-eval-pipeline": "11-llm-engineering",
+  "ragas-evaluators": "11-llm-engineering",
   "01-the-agent-loop": "14-agent-engineering",
-  "vllm-production": "17-vllm-high-throughput-serving",
+  "vllm-production": "17-infrastructure-and-production",
 };
 
 function extractPhase(path: string, customPhase?: string, slug?: string) {
@@ -168,9 +168,10 @@ export interface Topic {
 
 export const TOPICS: Topic[] = [
   // 1. Foundation
-  { name: "Python", desc: "Python 3.12 internals, memory model, concurrency và tối ưu hóa hiệu năng.", layer: "Foundation", tag: "Python" },
   { name: "Developer Tools", desc: "CLI, uv package manager, profiling, Docker và môi trường AI chuẩn.", layer: "Foundation", tag: "Developer Tools" },
-  { name: "Machine Learning", desc: "Nguyên lý máy học từ đầu: Decision Trees, SVM, PCA và Gradient Descent.", layer: "Foundation", tag: "Machine Learning" },
+  { name: "Math & AI Foundations", desc: "Đại số tuyến tính, giải tích ma trận, xác suất, SVD và tối ưu hóa lồi từ bản chất.", layer: "Foundation", tag: "Math & AI Foundations" },
+  { name: "Machine Learning", desc: "Nguyên lý máy học từ đầu: Linear/Logistic Regression, Trees, SVM, Ensemble và ML Pipelines.", layer: "Foundation", tag: "Machine Learning" },
+  { name: "Python", desc: "Python 3.12 internals, memory model, concurrency và tối ưu hóa hiệu năng.", layer: "Foundation", tag: "Python" },
   { name: "Deep Learning", desc: "Mạng nơ-ron, backpropagation engine, autograd và tensor operations.", layer: "Foundation", tag: "Deep Learning" },
 
   // 2. Core LLM & RAG
@@ -204,32 +205,32 @@ export interface PhaseInfo {
 
 export const PHASES: PhaseInfo[] = [
   // Foundation (Phases 00-04)
-  { id: "00-setup-and-tooling", number: "00", title: "Setup & Tooling", titleVi: "Thiết lập Môi trường & Công cụ", desc: "Môi trường phát triển AI đa ngôn ngữ, uv, Python 3.12, GPU acceleration CUDA/MPS", layer: "Foundation", status: "active" },
-  { id: "01-python-internals", number: "01", title: "Python Internals", titleVi: "Bản chất Ngôn ngữ Python", desc: "Memory model, GIL, GIL-free 3.13, asyncio event loop và micro-benchmarks", layer: "Foundation", status: "active" },
-  { id: "02-math-for-ai", number: "02", title: "Mathematics for AI", titleVi: "Toán học Nền tảng cho AI", desc: "Đại số tuyến tính, giải tích ma trận, xác suất thống kê và thuật toán tối ưu", layer: "Foundation", status: "planned" },
-  { id: "03-machine-learning-fundamentals", number: "03", title: "Machine Learning from Scratch", titleVi: "Máy học từ Bản chất", desc: "Decision Trees, Gradient Descent, SVM, Logistic Regression và PCA thuần NumPy", layer: "Foundation", status: "active" },
-  { id: "04-deep-learning-foundations", number: "04", title: "Deep Learning & Autograd", titleVi: "Học sâu & Động cơ Vi phân", desc: "Xây dựng autograd engine từ đầu, backpropagation, MLP và activation functions", layer: "Foundation", status: "active" },
+  { id: "00-setup-and-tooling", number: "00", title: "Setup & Tooling", titleVi: "Thiết lập Môi trường & Công cụ", desc: "Môi trường phát triển AI hiện đại, uv, Python 3.12, profiling, Docker và GPU CUDA/MPS", layer: "Foundation", status: "active" },
+  { id: "01-math-foundations", number: "01", title: "Math Foundations", titleVi: "Toán học Nền tảng cho AI", desc: "Đại số tuyến tính, giải tích ma trận, autodiff, xác suất thống kê, SVD và tối ưu hóa lồi", layer: "Foundation", status: "active" },
+  { id: "02-ml-fundamentals", number: "02", title: "ML Fundamentals", titleVi: "Máy học Thực chiến từ Đầu", desc: "Linear/Logistic Regression, Decision Trees, SVM, Ensemble, Pipelines, Drift & Feature Stores thuần NumPy", layer: "Foundation", status: "active" },
+  { id: "03-deep-learning-core", number: "03", title: "Deep Learning Core", titleVi: "Học sâu & Động cơ Vi phân", desc: "Xây dựng autograd engine từ đầu, backpropagation, MLP, regularization và normalization", layer: "Foundation", status: "active" },
+  { id: "04-computer-vision", number: "04", title: "Computer Vision", titleVi: "Thị giác Máy tính", desc: "Convolution từ đầu, ResNet, Vision Transformers (ViT) và object detection", layer: "Foundation", status: "planned" },
 
-  // Core LLM & RAG (Phases 05-11)
-  { id: "05-transformers-from-scratch", number: "05", title: "Transformers Architecture", titleVi: "Kiến trúc Transformer từ Đầu", desc: "Scaled dot-product attention, multi-head attention, RoPE và positional encoding", layer: "Core LLM & RAG", status: "planned" },
-  { id: "06-llm-pretraining", number: "06", title: "LLM Pre-training", titleVi: "Tiền huấn luyện Mô hình Lớn", desc: "Xử lý dữ liệu quy mô lớn, causal language modeling, tokenizer BPE và loss tracking", layer: "Core LLM & RAG", status: "planned" },
-  { id: "07-sft-and-peft", number: "07", title: "SFT & PEFT Optimization", titleVi: "Tinh chỉnh Mô hình Hiệu quả (LoRA/QLoRA)", desc: "Fine-tuning tham số hiệu quả, LoRA rank decomposition, QLoRA 4-bit và DeepSpeed ZeRO", layer: "Core LLM & RAG", status: "active" },
-  { id: "08-alignment-rlhf-dpo", number: "08", title: "Alignment: RLHF & DPO", titleVi: "Căn chỉnh Hành vi (RLHF & DPO)", desc: "Direct Preference Optimization, reward modeling, safety filters và reasoning alignment", layer: "Core LLM & RAG", status: "planned" },
-  { id: "09-vector-dbs-and-embeddings", number: "09", title: "Vector Embeddings & Retrieval", titleVi: "Không gian Vector & Tìm kiếm Ngữ nghĩa", desc: "HNSW index, dense/sparse embeddings, BM25 hybrid search và reranking algorithms", layer: "Core LLM & RAG", status: "planned" },
-  { id: "10-rag-patterns", number: "10", title: "RAG Pipeline Architectures", titleVi: "Kiến trúc Pipeline RAG Toàn diện", desc: "Chunking strategies, contextual retrieval, query expansion và pipeline CI/CD", layer: "Core LLM & RAG", status: "active" },
-  { id: "11-rag-evaluation-ragas", number: "11", title: "RAG Evaluation & LLM Judges", titleVi: "Đánh giá RAG với RAGAS & LLM Judges", desc: "RAG Triad, Faithfulness, Answer Relevancy, Context Recall và synthetic testset generation", layer: "Core LLM & RAG", status: "active" },
+  // Core LLM & RAG (Phases 05-12)
+  { id: "05-nlp-foundations-to-advanced", number: "05", title: "NLP Foundations", titleVi: "Xử lý Ngôn ngữ Tự nhiên", desc: "Tokenization, Word Embeddings, RNN/LSTM, Seq2Seq và cơ chế Attention cổ điển", layer: "Core LLM & RAG", status: "planned" },
+  { id: "06-speech-and-audio", number: "06", title: "Speech & Audio", titleVi: "Xử lý Âm thanh & Giọng nói", desc: "STFT, Mel Spectrogram, ASR (Whisper) và tổng hợp giọng nói (TTS)", layer: "Core LLM & RAG", status: "planned" },
+  { id: "07-transformers-deep-dive", number: "07", title: "Transformers Deep Dive", titleVi: "Giải mã Kiến trúc Transformer", desc: "Scaled Dot-Product Attention, Multi-Head Attention, RoPE, KV Cache và FlashAttention", layer: "Core LLM & RAG", status: "planned" },
+  { id: "08-generative-ai", number: "08", title: "Generative AI", titleVi: "AI Tạo sinh & Mô hình Khuếch tán", desc: "VAE, GAN, Diffusion Models (DDPM), Flow Matching và sinh đa phương tiện", layer: "Core LLM & RAG", status: "planned" },
+  { id: "09-reinforcement-learning", number: "09", title: "Reinforcement Learning", titleVi: "Học Tăng cường & Tối ưu Chính sách", desc: "MDP, Q-Learning, Policy Gradient, PPO, GRPO và ứng dụng trong RLHF/Reasoning", layer: "Core LLM & RAG", status: "planned" },
+  { id: "10-llms-from-scratch", number: "10", title: "LLMs from Scratch", titleVi: "Xây dựng LLM từ Số 0", desc: "BPE Tokenizer, Causal LM Decoder, Pre-training loop, Scaling Laws và Checkpoint", layer: "Core LLM & RAG", status: "planned" },
+  { id: "11-llm-engineering", number: "11", title: "LLM Engineering & RAG", titleVi: "Kỹ thuật LLM, Fine-tuning & RAG", desc: "SFT/LoRA/QLoRA, Hybrid RAG Pipelines, RAGAS Evaluation và LLM-as-a-Judge", layer: "Core LLM & RAG", status: "active" },
+  { id: "12-multimodal-ai", number: "12", title: "Multimodal AI", titleVi: "AI Đa phương thức", desc: "CLIP, Vision-Language Models (VLM), Audio-Text Alignment và cross-modal attention", layer: "Core LLM & RAG", status: "planned" },
 
-  // Agent Systems (Phases 12-16)
-  { id: "12-prompt-engineering", number: "12", title: "Structured Prompting", titleVi: "Kỹ thuật Prompt & Structured Output", desc: "Chain-of-thought, Few-shot prompting, JSON schema constrained decoding với Outlines", layer: "Agent Systems", status: "planned" },
-  { id: "13-function-calling-tools", number: "13", title: "Tool Calling & MCP Protocol", titleVi: "Gọi Công cụ & Giao thức MCP", desc: "Model Context Protocol (MCP), tool definitions, schema validation và sandbox execution", layer: "Agent Systems", status: "planned" },
-  { id: "14-agent-engineering", number: "14", title: "Agent Engineering & ReAct", titleVi: "Kỹ thuật Hệ thống Agent & ReAct", desc: "Chu trình ReAct (Observe-Think-Act), turn budget, native reasoning tokens bằng stdlib", layer: "Agent Systems", status: "active" },
-  { id: "15-multi-agent-swarms", number: "15", title: "Multi-Agent Swarms", titleVi: "Hệ thống Đa Tác tử Cộng tác", desc: "Mô hình Orchestrator-Workers, consensus protocols, debate loops và blackboard pattern", layer: "Agent Systems", status: "planned" },
-  { id: "16-autonomous-software-engineers", number: "16", title: "Autonomous Coding Agents", titleVi: "Tác tử Lập trình Tự trị", desc: "SWE-bench workflows, test-driven self-healing, file modification and git automation", layer: "Agent Systems", status: "planned" },
+  // Agent Systems (Phases 13-16)
+  { id: "13-tools-and-protocols", number: "13", title: "Tools & Protocols (MCP)", titleVi: "Gọi Công cụ & Giao thức MCP", desc: "Model Context Protocol (MCP), function calling, schema validation và sandbox execution", layer: "Agent Systems", status: "planned" },
+  { id: "14-agent-engineering", number: "14", title: "Agent Engineering", titleVi: "Kỹ thuật Hệ thống Agent & ReAct", desc: "Vòng lặp ReAct (Observe-Think-Act), ReWOO, Reflexion, turn budget và memory", layer: "Agent Systems", status: "active" },
+  { id: "15-autonomous-systems", number: "15", title: "Autonomous Systems", titleVi: "Hệ thống Tác tử Tự trị", desc: "SWE-bench workflows, self-healing code agents, planning trees và long-horizon tasks", layer: "Agent Systems", status: "planned" },
+  { id: "16-multi-agent-and-swarms", number: "16", title: "Multi-Agent & Swarms", titleVi: "Hệ thống Đa Tác tử Cộng tác", desc: "Orchestrator-Workers, consensus protocols, debate loops và blackboard pattern", layer: "Agent Systems", status: "planned" },
 
   // Production / Infra (Phases 17-19)
-  { id: "17-vllm-high-throughput-serving", number: "17", title: "vLLM & High-Throughput Serving", titleVi: "Phục vụ Suy luận Tốc độ cao với vLLM", desc: "PagedAttention, continuous batching, KV cache management và GPU memory budgeting", layer: "Production / Infra", status: "active" },
-  { id: "18-mlops-ci-cd-pipelines", number: "18", title: "MLOps & Automated Quality Gates", titleVi: "Vận hành MLOps & Cổng Kiểm soát CI/CD", desc: "Automated regression testing, evaluation gates, latency monitoring và Prometheus metrics", layer: "Production / Infra", status: "planned" },
-  { id: "19-k8s-infra-and-scaling", number: "19", title: "Kubernetes GPU Orchestration", titleVi: "Hạ tầng Kubernetes & Điều phối GPU", desc: "NVIDIA container runtime, Horizontal Pod Autoscaling (HPA) và zero-downtime serving", layer: "Production / Infra", status: "planned" },
+  { id: "17-infrastructure-and-production", number: "17", title: "MLOps & Production Infra", titleVi: "Hạ tầng Suy luận & Vận hành MLOps", desc: "vLLM PagedAttention, continuous batching, quantization, Kubernetes GPU và CI/CD gates", layer: "Production / Infra", status: "active" },
+  { id: "18-ethics-safety-alignment", number: "18", title: "AI Safety & Alignment", titleVi: "An toàn, Căn chỉnh & Bảo mật AI", desc: "Guardrails, prompt injection defense, red-teaming, RLHF/DPO và đánh giá rủi ro", layer: "Production / Infra", status: "planned" },
+  { id: "19-capstone-projects", number: "19", title: "Capstone Projects", titleVi: "Dự án Tổng hợp Thực chiến", desc: "Thiết kế và triển khai end-to-end các hệ thống AI Production hoàn chỉnh", layer: "Production / Infra", status: "planned" },
 ];
 
 export interface ArchitectureNote {

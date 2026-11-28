@@ -5,8 +5,176 @@
     <link>https://setlog.dev</link>
     <description>Personal technical notebook on AI, LLM systems, RAG architecture, and engineering.</description>
     <language>vi</language>
-    <lastBuildDate>Mon, 23 Nov 2026 13:59:52 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 04:35:45 GMT</lastBuildDate>
     <atom:link href="https://setlog.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Machine Learning Là Gì? Tư Duy Hệ Thống Từ Dữ Liệu</title>
+      <link>https://setlog.dev/article/01-what-is-machine-learning</link>
+      <guid isPermaLink="true">https://setlog.dev/article/01-what-is-machine-learning</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Chuyển dịch tư duy từ lập trình luật cứng (if-else) sang học quy luật từ dữ liệu: phân loại bài toán, hàm mất mát và tự tay xây dựng bộ phân loại Nearest Centroid từ đầu.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Linear Regression: Nền Tảng Của Mọi Thuật Toán Tối Ưu</title>
+      <link>https://setlog.dev/article/02-linear-regression</link>
+      <guid isPermaLink="true">https://setlog.dev/article/02-linear-regression</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu sâu bản chất Linear Regression từ góc độ hình học và giải tích: tự tay cài đặt Gradient Descent, Normal Equation và Ridge Regularization thuần NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Logistic Regression: Phân Loại Nhị Phân &amp; Xác Suất</title>
+      <link>https://setlog.dev/article/03-logistic-regression</link>
+      <guid isPermaLink="true">https://setlog.dev/article/03-logistic-regression</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Biến đường thẳng thành đường cong chữ S (Sigmoid) để dự đoán xác suất: hiểu vì sao MSE thất bại, cài đặt Binary Cross-Entropy và các chỉ số Precision/Recall/F1 thuần NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Decision Trees &amp; Random Forests: Vua Của Dữ Liệu Dạng Bảng</title>
+      <link>https://setlog.dev/article/04-decision-trees</link>
+      <guid isPermaLink="true">https://setlog.dev/article/04-decision-trees</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu cơ chế chia nhánh đệ quy bằng Gini Impurity, tự tay xây dựng Decision Tree và nâng cấp thành Random Forest bằng Bootstrap Sampling thuần NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Support Vector Machines (SVM): Tìm Con Đường Rộng Nhất</title>
+      <link>https://setlog.dev/article/05-support-vector-machines</link>
+      <guid isPermaLink="true">https://setlog.dev/article/05-support-vector-machines</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu nguyên lý Maximum Margin, cài đặt Linear SVM từ đầu bằng Hinge Loss và Gradient Descent, cùng trực giác về tham số C và Kernel Trick.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>K-Nearest Neighbors (KNN) &amp; Các Độ Đo Khoảng Cách</title>
+      <link>https://setlog.dev/article/06-knn-and-distances</link>
+      <guid isPermaLink="true">https://setlog.dev/article/06-knn-and-distances</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu bản chất thuật toán lười (Lazy Learning), tại sao Euclidean sụp đổ ở không gian nhiều chiều, và tự tay xây dựng KNN tối ưu bằng NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Unsupervised Learning: K-Means Clustering &amp; PCA</title>
+      <link>https://setlog.dev/article/07-unsupervised-learning</link>
+      <guid isPermaLink="true">https://setlog.dev/article/07-unsupervised-learning</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khám phá cấu trúc ẩn trong dữ liệu không nhãn: tự tay code K-Means (với K-Means++ init) và PCA (Eigen-decomposition / SVD) thuần NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Feature Engineering: Nghệ Thuật Biến Dữ Liệu Thô Thành Tín Hiệu</title>
+      <link>https://setlog.dev/article/08-feature-engineering</link>
+      <guid isPermaLink="true">https://setlog.dev/article/08-feature-engineering</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Dữ liệu quyết định 80% thành công của mô hình ML. Tự tay xây dựng Pipeline chuẩn hóa, mã hóa và xử lý dữ liệu thiếu thuần NumPy không bị Data Leakage.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Model Evaluation: Đánh Giá Mô Hình Đúng Cách (Ngoài Accuracy)</title>
+      <link>https://setlog.dev/article/09-model-evaluation</link>
+      <guid isPermaLink="true">https://setlog.dev/article/09-model-evaluation</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Tại sao Accuracy 99.9% lại là một thảm họa? Tự tay xây dựng Confusion Matrix, Precision, Recall, F1, ROC-AUC và Stratified K-Fold thuần NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Bias-Variance Tradeoff: Hiểu Tận Gốc Overfitting &amp; Underfitting</title>
+      <link>https://setlog.dev/article/10-bias-variance</link>
+      <guid isPermaLink="true">https://setlog.dev/article/10-bias-variance</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Phân rã sai số tổng quát thành Bias², Variance và Irreducible Error. Tự tay mô phỏng đường cong học tập (Learning Curves) và Regularization thuần NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Ensemble Methods: Sức mạnh của đám đông (Bagging, Boosting &amp; Stacking)</title>
+      <link>https://setlog.dev/article/11-ensemble-methods</link>
+      <guid isPermaLink="true">https://setlog.dev/article/11-ensemble-methods</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Cách kết hợp nhiều mô hình yếu thành một hệ thống dự đoán mạnh mẽ: giảm variance bằng Bagging, giảm bias bằng Boosting, và tối ưu hóa bằng Stacking.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Hyperparameter Tuning: Tìm cấu hình tối ưu không đốt tiền vô ích</title>
+      <link>https://setlog.dev/article/12-hyperparameter-tuning</link>
+      <guid isPermaLink="true">https://setlog.dev/article/12-hyperparameter-tuning</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>So sánh Grid Search, Random Search và Bayesian Optimization; tự xây dựng bộ tìm kiếm siêu tham số bằng thuần Python + NumPy và tránh bẫy overfit tập validation.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>ML Pipelines: Đóng gói luồng xử lý &amp; Chống Data Leakage</title>
+      <link>https://setlog.dev/article/13-ml-pipelines</link>
+      <guid isPermaLink="true">https://setlog.dev/article/13-ml-pipelines</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Xây dựng ML Pipeline chuẩn chỉnh từ đầu bằng Python + NumPy: tách biệt fit và transform, ngăn chặn data leakage trong cross-validation và loại bỏ training-serving skew.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Naive Bayes: Thuật toán phân loại siêu tốc từ Định lý Bayes</title>
+      <link>https://setlog.dev/article/14-naive-bayes</link>
+      <guid isPermaLink="true">https://setlog.dev/article/14-naive-bayes</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu bản chất giả định độc lập có điều kiện, xử lý numerical underflow bằng log-probabilities và Laplace smoothing; tự xây dựng Gaussian &amp; Multinomial Naive Bayes bằng Python + NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Time Series Forecasting: Dự báo chuỗi thời gian &amp; Cạm bẫy rò rỉ tương lai</title>
+      <link>https://setlog.dev/article/15-time-series</link>
+      <guid isPermaLink="true">https://setlog.dev/article/15-time-series</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Phân tích Trend, Seasonality, Stationarity; tự xây dựng Walk-Forward Validation, Lag Features và mô hình Autoregressive (AR) thuần Python + NumPy.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Anomaly Detection: Phát hiện bất thường từ nguyên lý gốc</title>
+      <link>https://setlog.dev/article/16-anomaly-detection</link>
+      <guid isPermaLink="true">https://setlog.dev/article/16-anomaly-detection</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bình thường rất dễ định nghĩa. Bất thường là tất cả những gì không khớp với mô hình bình thường.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Handling Imbalanced Data: Xử lý dữ liệu mất cân bằng</title>
+      <link>https://setlog.dev/article/17-imbalanced-data</link>
+      <guid isPermaLink="true">https://setlog.dev/article/17-imbalanced-data</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Khi 99% dữ liệu là bình thường, Accuracy là một lời nói dối.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Feature Selection: Chọn lọc đặc trưng tinh gọn &amp; chống Overfitting</title>
+      <link>https://setlog.dev/article/18-feature-selection</link>
+      <guid isPermaLink="true">https://setlog.dev/article/18-feature-selection</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Nhiều đặc trưng hơn không đồng nghĩa với mô hình tốt hơn — đôi khi nó chỉ thêm nhiễu.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>ML System Design: Kiến trúc hệ thống Machine Learning thực chiến</title>
+      <link>https://setlog.dev/article/19-ml-system-design</link>
+      <guid isPermaLink="true">https://setlog.dev/article/19-ml-system-design</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Mô hình chỉ chiếm 10% hệ thống ML. 90% còn lại là dữ liệu, hạ tầng, độ trễ và vòng lặp phản hồi.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Model Monitoring &amp; Drift: Giám sát mô hình và phát hiện trôi dữ liệu</title>
+      <link>https://setlog.dev/article/20-model-monitoring-and-drift</link>
+      <guid isPermaLink="true">https://setlog.dev/article/20-model-monitoring-and-drift</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Mô hình Machine Learning bắt đầu thối rữa ngay từ giây phút bạn deploy nó lên production.</description>
+      <category>Machine Learning</category>
+    </item>
+    <item>
+      <title>Feature Stores &amp; Training-Serving Skew: Đồng bộ dữ liệu Train và Serve</title>
+      <link>https://setlog.dev/article/21-feature-stores-and-training-serving-skew</link>
+      <guid isPermaLink="true">https://setlog.dev/article/21-feature-stores-and-training-serving-skew</guid>
+      <pubDate>Fri, 27 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Kẻ giết chết mô hình thầm lặng nhất trên production: tính toán feature lúc train khác với lúc serve.</description>
+      <category>Machine Learning</category>
+    </item>
     <item>
       <title>Trực giác Đại số Tuyến tính cho AI (Linear Algebra Intuition)</title>
       <link>https://setlog.dev/article/01-linear-algebra-intuition</link>

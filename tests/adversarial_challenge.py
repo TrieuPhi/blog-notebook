@@ -23,10 +23,10 @@ if hasattr(sys.stdout, "reconfigure"):
 if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="backslashreplace")
 
-POSTS_DIR = Path(r"c:\project\blog\blog-notebook\frontend\posts")
+POSTS_DIR = Path(__file__).resolve().parent.parent / "frontend" / "posts"
 
 CANONICAL_CATEGORIES = {
-    "AI", "Agent Engineering", "LLM", "RAG", "RAGAS", "MLOps", "Backend", "DevOps", "Python", "Developer Tools", "Learning", "Math & AI Foundations"
+    "AI", "Agent Engineering", "LLM", "RAG", "RAGAS", "MLOps", "Backend", "DevOps", "Python", "Developer Tools", "Learning", "Math & AI Foundations", "Machine Learning"
 }
 
 VALID_MERMAID_TYPES = {
