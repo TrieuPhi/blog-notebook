@@ -5,8 +5,112 @@
     <link>https://setlog.dev</link>
     <description>Personal technical notebook on AI, LLM systems, RAG architecture, and engineering.</description>
     <language>vi</language>
-    <lastBuildDate>Sat, 28 Nov 2026 04:35:45 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 28 Nov 2026 04:48:43 GMT</lastBuildDate>
     <atom:link href="https://setlog.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Perceptron: Viên Gạch Nguyên Tử Của Mạng Nơ-ron</title>
+      <link>https://setlog.dev/article/01-the-perceptron</link>
+      <guid isPermaLink="true">https://setlog.dev/article/01-the-perceptron</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu bản chất bộ phân loại tuyến tính đầu tiên trong Deep Learning: trọng số, bias, luật học Perceptron, chứng minh toán học vì sao XOR thất bại và cách mạng 2 lớp phá vỡ giới hạn tuyến tính.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Mạng Đa Lớp (MLP) &amp; Forward Pass: Từ Đường Thẳng Đến Đường Cong</title>
+      <link>https://setlog.dev/article/02-multi-layer-networks</link>
+      <guid isPermaLink="true">https://setlog.dev/article/02-multi-layer-networks</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Xây dựng Multi-Layer Perceptron vector hóa thuần NumPy với kiến trúc tùy biến: làm chủ quy tắc theo dõi kích thước ma trận, Định lý Xấp xỉ Vạn năng và huấn luyện ranh giới phi tuyến trên bài toán XOR và hình tròn.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Backpropagation &amp; Autograd: Tự Tay Xây Dựng Động Cơ Đạo Hàm Ngược</title>
+      <link>https://setlog.dev/article/03-backpropagation</link>
+      <guid isPermaLink="true">https://setlog.dev/article/03-backpropagation</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bóc trần cơ chế Reverse-mode Automatic Differentiation qua Computational Graph và Chain Rule: tự tay cài đặt scalar Value Autograd Engine thuần Python, kiểm chứng bằng sai phân hữu hạn và huấn luyện MLP trên XOR.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Hàm Kích Hoạt (Activation Functions): Từ Sigmoid Đến ReLU, GELU &amp; SwiGLU</title>
+      <link>https://setlog.dev/article/04-activation-functions</link>
+      <guid isPermaLink="true">https://setlog.dev/article/04-activation-functions</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Vì sao mạng 100 lớp thiếu hàm kích hoạt chỉ bằng 1 lớp tuyến tính? Cài đặt và đạo hàm Sigmoid, Tanh, ReLU, LeakyReLU, GELU, SiLU, Softmax ổn định số học và đo luồng gradient thực tế qua 10 lớp.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Loss Functions: Thước Đo Sai Số Và Động Lực Học Của Mạng Neural</title>
+      <link>https://setlog.dev/article/05-loss-functions</link>
+      <guid isPermaLink="true">https://setlog.dev/article/05-loss-functions</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Hiểu bản chất toán học và ổn định số học của các hàm Loss cốt lõi: MSE, Huber, Binary Cross-Entropy từ logits, Cross-Entropy với LogSumExp trick và KL Divergence thuần Python.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Optimizers: Từ SGD, Momentum Đến Adam Và AdamW</title>
+      <link>https://setlog.dev/article/06-optimizers</link>
+      <guid isPermaLink="true">https://setlog.dev/article/06-optimizers</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Bóc tách cơ chế hoạt động của SGD, Momentum, RMSProp, Adam và AdamW: giải thích Bias Correction, Decoupled Weight Decay và benchmark trực diện trên thung lũng Rosenbrock thuần Python.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Regularization: Chống Overfitting Từ Weight Decay, Dropout Đến Label Smoothing</title>
+      <link>https://setlog.dev/article/07-regularization</link>
+      <guid isPermaLink="true">https://setlog.dev/article/07-regularization</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ bộ công cụ chống Overfitting trong Deep Learning: tự tay cài đặt L1/L2 Weight Decay, Inverted Dropout (Train vs Eval), Label Smoothing và Early Stopping thuần Python.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Weight Initialization: Khởi Tạo Trọng Số Để Mạng Sâu Không Chết Từ Bước 0</title>
+      <link>https://setlog.dev/article/08-weight-initialization</link>
+      <guid isPermaLink="true">https://setlog.dev/article/08-weight-initialization</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Giải mã bài toán lan truyền phương sai qua mạng sâu: chứng minh lỗi đối xứng của Zero Init, bùng nổ của N(0, 1) và kiểm chứng Xavier/Glorot cùng He/Kaiming trên mạng 10 lớp thuần Python.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Learning Rate Schedules &amp; Warmup: Điều Tiết Tốc Độ Học Chuẩn LLM</title>
+      <link>https://setlog.dev/article/09-learning-rate-schedules</link>
+      <guid isPermaLink="true">https://setlog.dev/article/09-learning-rate-schedules</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Làm chủ nghệ thuật điều phối Learning Rate trong Deep Learning: tự tay xây dựng Step Decay, Exponential Decay, Cosine Annealing, Linear Warmup + Cosine Decay và One-Cycle LR thuần Python.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Tự Xây Dựng Mini Deep Learning Framework Từ Con Số 0</title>
+      <link>https://setlog.dev/article/10-mini-framework</link>
+      <guid isPermaLink="true">https://setlog.dev/article/10-mini-framework</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Kết nối toàn bộ mảnh ghép từ Bài 01 đến 09 thành một Mini Deep Learning Framework hoàn chỉnh với Module, Linear, ReLU, Dropout, Sequential, CrossEntropyLoss, AdamW và DataLoader chỉ bằng Python + NumPy.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Nhập Môn PyTorch 2.x: Từ Mini Framework Đến Production</title>
+      <link>https://setlog.dev/article/11-intro-to-pytorch</link>
+      <guid isPermaLink="true">https://setlog.dev/article/11-intro-to-pytorch</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Ánh xạ 1-đối-1 từ Mini Framework thuần NumPy sang PyTorch 2.x: làm chủ Tensor, Autograd, Eager Execution, Mixed Precision, torch.compile và vòng lặp huấn luyện chuẩn công nghiệp.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Nhập Môn JAX: Lập Trình Thuần Hàm, Pytree &amp; Biên Dịch XLA</title>
+      <link>https://setlog.dev/article/12-intro-to-jax</link>
+      <guid isPermaLink="true">https://setlog.dev/article/12-intro-to-jax</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Chuyển đổi tư duy từ OOP biến đổi trạng thái (PyTorch) sang lập trình thuần hàm trong JAX: làm chủ PRNG Key, Pytree bất biến, tự động vector hóa vmap, đạo hàm grad và biên dịch XLA qua jit.</description>
+      <category>Deep Learning</category>
+    </item>
+    <item>
+      <title>Gỡ Lỗi Mạng Nơ-ron (Debugging Neural Networks): Quy Trình Khoa Học</title>
+      <link>https://setlog.dev/article/13-debugging-neural-networks</link>
+      <guid isPermaLink="true">https://setlog.dev/article/13-debugging-neural-networks</guid>
+      <pubDate>Sat, 28 Nov 2026 00:00:00 GMT</pubDate>
+      <description>Đừng đoán mò khi Loss đứng yên hay nổ NaN: áp dụng bộ công cụ gỡ lỗi mạng nơ-ron chuẩn mực với Loss Sanity Check, Gradient Checking bằng sai phân hữu hạn, Overfit-Single-Batch và theo dõi Dead ReLU.</description>
+      <category>Deep Learning</category>
+    </item>
     <item>
       <title>Machine Learning Là Gì? Tư Duy Hệ Thống Từ Dữ Liệu</title>
       <link>https://setlog.dev/article/01-what-is-machine-learning</link>
