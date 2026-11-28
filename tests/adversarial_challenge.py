@@ -26,7 +26,7 @@ if hasattr(sys.stderr, "reconfigure"):
 POSTS_DIR = Path(__file__).resolve().parent.parent / "frontend" / "posts"
 
 CANONICAL_CATEGORIES = {
-    "AI", "Agent Engineering", "LLM", "RAG", "RAGAS", "MLOps", "Backend", "DevOps", "Python", "Developer Tools", "Learning", "Math & AI Foundations", "Machine Learning", "Deep Learning"
+    "AI", "Agent Engineering", "LLM", "RAG", "RAGAS", "MLOps", "Backend", "DevOps", "Python", "Developer Tools", "Learning", "Math & AI Foundations", "Machine Learning", "Deep Learning", "Computer Vision"
 }
 
 VALID_MERMAID_TYPES = {

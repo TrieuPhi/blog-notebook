@@ -173,6 +173,7 @@ export const TOPICS: Topic[] = [
   { name: "Machine Learning", desc: "Nguyên lý máy học từ đầu: Linear/Logistic Regression, Trees, SVM, Ensemble và ML Pipelines.", layer: "Foundation", tag: "Machine Learning" },
   { name: "Python", desc: "Python 3.12 internals, memory model, concurrency và tối ưu hóa hiệu năng.", layer: "Foundation", tag: "Python" },
   { name: "Deep Learning", desc: "Mạng nơ-ron, backpropagation engine, autograd và tensor operations.", layer: "Foundation", tag: "Deep Learning" },
+  { name: "Computer Vision", desc: "Tích chập từ đầu, CNN/ViT, YOLO, U-Net, Diffusion, NeRF, 3DGS và Vision-Language Models.", layer: "Foundation", tag: "Computer Vision" },
 
   // 2. Core LLM & RAG
   { name: "LLM", desc: "Kiến trúc Attention, Pre-training, fine-tuning và lượng tử hóa mô hình.", layer: "Core LLM & RAG", tag: "LLM" },
@@ -209,7 +210,7 @@ export const PHASES: PhaseInfo[] = [
   { id: "01-math-foundations", number: "01", title: "Math Foundations", titleVi: "Toán học Nền tảng cho AI", desc: "Đại số tuyến tính, giải tích ma trận, autodiff, xác suất thống kê, SVD và tối ưu hóa lồi", layer: "Foundation", status: "active" },
   { id: "02-ml-fundamentals", number: "02", title: "ML Fundamentals", titleVi: "Máy học Thực chiến từ Đầu", desc: "Linear/Logistic Regression, Decision Trees, SVM, Ensemble, Pipelines, Drift & Feature Stores thuần NumPy", layer: "Foundation", status: "active" },
   { id: "03-deep-learning-core", number: "03", title: "Deep Learning Core", titleVi: "Học sâu & Động cơ Vi phân", desc: "Xây dựng autograd engine từ đầu, backpropagation, MLP, regularization và normalization", layer: "Foundation", status: "active" },
-  { id: "04-computer-vision", number: "04", title: "Computer Vision", titleVi: "Thị giác Máy tính", desc: "Convolution từ đầu, ResNet, Vision Transformers (ViT) và object detection", layer: "Foundation", status: "planned" },
+  { id: "04-computer-vision", number: "04", title: "Computer Vision", titleVi: "Thị giác Máy tính", desc: "Convolution từ đầu, ResNet, YOLO, U-Net, Diffusion, ViT, 3DGS, SAM 3, VLM và World Models", layer: "Foundation", status: "active" },
 
   // Core LLM & RAG (Phases 05-12)
   { id: "05-nlp-foundations-to-advanced", number: "05", title: "NLP Foundations", titleVi: "Xử lý Ngôn ngữ Tự nhiên", desc: "Tokenization, Word Embeddings, RNN/LSTM, Seq2Seq và cơ chế Attention cổ điển", layer: "Core LLM & RAG", status: "planned" },

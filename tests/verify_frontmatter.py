@@ -60,6 +60,7 @@ CANONICAL_CATEGORIES = {
     "Math & AI Foundations",
     "Machine Learning",
     "Deep Learning",
+    "Computer Vision",
 }
 
 DATE_REGEX = re.compile(r"^\d{4}-\d{2}-\d{2}$")
